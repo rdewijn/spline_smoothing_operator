@@ -1,28 +1,33 @@
 {
-  "name": "Template R operator",
-  "description": "Return the medium value of a cell",
-  "tags": ["template"],
-  "authors": ["tercen"],
-  "urls": ["https://github.com/tercen/template_R_operator"],
+  "name": "Spline Smoothing Operator",
+  "description": "Perform a smoothing using splines",
+  "tags": ["smoothing", "modeling", "splines"],
+  "authors": ["rdw"],
+  "urls": ["https://github.com/tercen/spline_smoothing_operator"],
   "properties": [
    {
-    "kind": "StringProperty",
-    "name": "string_example",
-    "defaultValue": "example",
-    "description": "description parameter 1"
+    "kind": "DoubleProperty",
+    "name": "n_interpolation",
+    "defaultValue": 100,
+    "description": "Number of points to sue for interpolated / smoothed line"
     },
     {
-    "kind": "EnumeratedProperty",
-    "name": "list_example",
-    "defaultValue": "value1",
-    "values": [
-      "value1",
-      "StringProperty",
-      "DoubleProperty",
-      "BooleanProperty",
-      "EnumeratedProperty"
-    ],
-    "description": "description parameter 2"
+    "kind": "DoubleProperty",
+    "name": "smooth_par",
+    "defaultValue": 0,
+    "description": "Smoothing parameter (higher is smoother)"
+  },
+    {
+    "kind": "BooleanProperty",
+    "name": "all_knots",
+    "defaultValue": true,
+    "description": "Use maximum number of knots"
+  },
+      {
+    "kind": "DoubleProperty",
+    "name": "n_knots",
+    "defaultValue": 10,
+    "description": "Number of knots to use when all_knots is false"
   }
   ]
 }
