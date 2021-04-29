@@ -22,7 +22,7 @@ do.spline <- function(df, spar, all_knots, n_knots) {
 spar = 0.7
 if(!is.null(ctx$op.value('smooth_par'))) spar <- as.numeric(ctx$op.value('smooth_par'))
 all_knots = FALSE
-if(!is.null(ctx$op.value('all_knots'))) all_knots <- as.numeric(ctx$op.value('all_knots'))
+if(!is.null(ctx$op.value('all_knots'))) all_knots <- as.logical(ctx$op.value('all_knots'))
 n_knots = 10
 if(!is.null(ctx$op.value('n_knots'))) n_knots <- as.numeric(ctx$op.value('n_knots'))
 
